@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registar</title>
+
+    <link  href="css/estilos1.css"  rel="stylesheet"    type="text/css">
+    <link  href="css/main.css"  rel="stylesheet"    type="text/css">
+
+
+</head>
+<body>
+        <input type="checkbox" id="botao_menu">
+        <label for="botao_menu">&#9776;</label>
+
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="#">Quem somos</a>
+                    <ul>
+                        <li><a href="unidade.html">Unidade</a></li>
+                        <li><a href="equipa.html">Equipa</a></li>
+                        <li><a href="Informações.html">Informações</a></li>
+                       
+                    </ul>
+                
+                </li>
+                <li><a href="#">O Que Fazemos</a>
+                    <ul>
+                        <li><a href="serviços.html">Serviços</a></li>
+                        <li><a href="consultas.html">Consultas</a></li>
+                    </ul>
+                </li>
+                <li><a href="Indicadores.html">Indicadores</a></li>
+                <li><a href="recursos.html">Recursos</a></li>  
+                <li><a href="mais apoio.html">Mais apoio</a></li>
+                <li><a href="">Área do cliente</a>
+                    <ul>
+                        <li><a href="login.html">Login</a></li>
+                        <li><a href="registar.html">Registar</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <br><br><br><br><br><br><br><br><br>
+        <form>
+            
+            <h1 id="form">Registar</h1>
+    
+            <label for="Nome" id="form"><strong>Nome Completo:</strong></label>
+            <input type="text" id="nome" value="" required autofocus>
+            
+            <label for="Email" id="form"><strong>Email:</strong></label>
+            <input type="text" id="email"  onblur="verificaEmail();" required >
+            
+            <label for="password" id="form"><strong>Password:</strong></label>
+            <input type="password" id="password" value="">
+            <input type="button" value="Registar" id="butao_1" onclick="registo(this.form)">
+        </form>
+        
+        <script src="scripts/script.js"></script>
+
+        <br><br><br><br><br><br><br><br><br>
+        <footer>
+            <div class="footer">
+                <div class="interior-footer">
+        
+                     <div class="footer-itens">
+                             <h1>USF VALE DO VEZ</h1>
+                             <p>A USF tem por missão a prestação de cuidados de saúde personalizados à população inscrita na área geográfica definida, garantindo a acessibilidade, a globalidade, a qualidade e a continuidade dos mesmos.</p>
+                     </div>
+        
+                     <div class="footer-itens">
+                         <h2>MENU</h2>
+                         <div class="border"></div>
+                         <ul>
+                             <a href="index.html"><li>Inicio</li></a>
+                             <a href="unidade.html"><li>Quem Somos</li></a>
+                             <a href="serviços.html"><li>O Que Fazemos</li></a>
+                             <a href="Indicadores.html"><li>Indicadores</li></a>
+                             <a href="recursos.html"><li>Recursos</li></a>
+                             <a href="mais apoio.html"><li>Mais Apoio</li></a>
+                             <a href="login.html"><li>Área do cliente</li></a>
+                         </ul>
+                 </div>
+                 
+                 <div class="footer-itens">
+                     <h2>Contacte-nos</h2>
+                     <div class="border"></div>
+                     <ul>
+                         <li>Rua Eng. Adelino Amaro da Costa </li>
+                         <li>Contacto: 258 520 150</li>
+                         <li>email: usf.valedovez@ulsam.min-saude.pt</li>
+                     </ul>
+             </div>
+    
+             <div class="footer-itens">
+                <h2>Horário de Funcionamento</h2>
+                <div class="border"></div>
+                <ul>
+                    <li>De 2ª a 6ª feira: 08:00 às 20:00</li>
+                    <li>Sábados, domingos e feriados: Encerrado</li>
+                    
+                </ul>
+        </div>
+        
+              </div> 
+            </div> 
+        </footer>
+    
+</body>
+</html>

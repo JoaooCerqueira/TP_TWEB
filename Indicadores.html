@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indicadores</title>
+
+    <link  href="css/estilos1.css"  rel="stylesheet"    type="text/css">
+    <link  href="css/main.css"  rel="stylesheet"    type="text/css">
+
+</head>
+<body>
+    
+    
+        <input type="checkbox" id="botao_menu">
+        <label for="botao_menu">&#9776;</label>
+
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="#">Quem somos</a>
+                    <ul>
+                        <li><a href="unidade.html">Unidade</a></li>
+                        <li><a href="equipa.html">Equipa</a></li>
+                        <li><a href="Informações.html">Informações</a></li>
+                        
+                    </ul>
+                
+                </li>
+                <li><a href="#">O Que Fazemos</a>
+                    <ul>
+                        <li><a href="serviços.html">Serviços</a></li>
+                        <li><a href="consultas.html">Consultas</a></li>
+                    </ul>
+                </li>
+                <li><a href="Indicadores.html">Indicadores</a></li>
+                <li><a href="recursos.html">Recursos</a></li>  
+                <li><a href="mais apoio.html">Mais apoio</a></li>
+                <li><a href="#">Área do cliente</a>
+                    <ul>
+                        <li><a href="login.html">Login</a></li>
+                        <li><a href="registar.html">Registar</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+<br><br>
+
+<div class="grafico">
+
+<div class="parent">	
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
+    google.charts.load("current", {packages:['corechart']});
+    google.charts.setOnLoadCallback(drawChart);
+    function drawChart() {
+      var data = google.visualization.arrayToDataTable([
+        ["Ano", "Utentes", { role: "style" } ],
+        ["2001", 60, "#b87333"],
+        ["2006", 68, "silver"],
+        ["2011", 74, "gold"],
+        ["2016", 85, "color: #e5e4e2"]
+      ]);
+
+      var view = new google.visualization.DataView(data);
+      view.setColumns([0, 1,
+                       { calc: "stringify",
+                         sourceColumn: 1,
+                         type: "string",
+                         role: "annotation" },
+                       2]);
+
+      var options = {
+        title: "Média de Inscritos por Médico",
+        width: 600,
+        height: 400,
+        bar: {groupWidth: "95%"},
+        legend: { position: "none" },
+      };
+      var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values"));
+      chart.draw(view, options);
+  }
+
+  </script>
+<div id="columnchart_values" style="width: 600px; height: 400px;"></div>
+</div>
+
+<br>
+
+
+<div class="parent">	
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Year', 'Nº de Idosos por 100 jovens'],
+          ['2001', 222],
+          ['2005',  354],
+          ['2010',  547],
+          ['2016',  753]
+        ]);
+
+        var options = {
+          title: 'Índice de Vitalidade',
+          hAxis: {title: 'Ano',  titleTextStyle: {color: '#333'}},
+          vAxis: {minValue: 0}
+        };
+
+        var chart = new google.visualization.AreaChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="chart_div" style="width: 600px; height: 400px;"></div>
+  </body>
+</div>
+
+<br>
+
+ <div class="parent">
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['Jovem',     2547],
+          ['Idosa',      3568],
+          ['Ativa',  11532],
+         
+        ]);
+
+        var options = {
+          title: 'Percentagem População Jovem/Idosa/Ativa',
+          is3D: true,
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+        chart.draw(data, options);
+      }
+    </script>
+	</head>
+  <body>
+    <div id="piechart_3d" style="width: 600px; height: 300px;"></div>
+  </body>
+  </div>
+  
+<br>
+
+ <div class="parent">
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Year', 'Masculino', 'Feminino'],
+          ['2015',  1052,      784],
+          ['2016',  1170,      801],
+          ['2017',  1198,       1002],
+          ['2018',  1231,      1098]
+        ]);
+
+        var options = {
+          title: 'População Ativa (por sexo)',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="curve_chart" style="width: 600px; height: 400px"></div>
+  </body>
+</div>
+
+<br>
+
+        <div class="parent">
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Idade dos Utentes', 'Nº Utentes Inscritos'],
+          ['0-14',  202],
+          ['15-29', 521],
+          ['30-49',  635],
+          ['50-69', 620],
+          ['70-89',   510],
+		  ['>90', 215]
+        ]);
+
+        var options = {
+          title: 'Idade dos Utentes Inscritos'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+	
+	
+	 <body>
+    <div id="piechart" style="width: 600px; height: 400px;"></div>
+  </body>
+    
+       </div>
+	   
+	   <br>
+	   
+	   <div class="parent">
+	   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Índice Dependência', 'Nº de Pessoas'],
+          ['Idosos',    1256],
+          ['Jovens',      351],
+          ['Sem Dependência',  630]
+         
+        ]);
+
+        var options = {
+          title: 'Índice Dependência',
+          pieHole: 0.4,
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="donutchart" style="width: 600px; height: 400px;"></div>
+  </body>
+  </div>
+      
+</div>
+<br><br>
+
+
+        <footer>
+            <div class="footer">
+                <div class="interior-footer">
+        
+                     <div class="footer-itens">
+                             <h1>USF VALE DO VEZ</h1>
+                             <p>A USF tem por missão a prestação de cuidados de saúde personalizados à população inscrita na área geográfica definida, garantindo a acessibilidade, a globalidade, a qualidade e a continuidade dos mesmos.</p>
+                     </div>
+        
+                     <div class="footer-itens">
+                         <h2>MENU</h2>
+                         <div class="border"></div>
+                         <ul>
+                             <a href="index.html"><li>Inicio</li></a>
+                             <a href="unidade.html"><li>Quem Somos</li></a>
+                             <a href="serviços.html"><li>O Que Fazemos</li></a>
+                             <a href="Indicadores.html"><li>Indicadores</li></a>
+                             <a href="recursos.html"><li>Recursos</li></a>
+                             <a href="mais apoio.html"><li>Mais Apoio</li></a>
+                             <a href="login.html"><li>Área do cliente</li></a>
+                         </ul>
+                 </div>
+                 
+                 <div class="footer-itens">
+                     <h2>Contacte-nos</h2>
+                     <div class="border"></div>
+                     <ul>
+                         <li>Rua Eng. Adelino Amaro da Costa </li>
+                         <li>Contacto: 258 520 150</li>
+                         <li>email: usf.valedovez@ulsam.min-saude.pt</li>
+                     </ul>
+             </div>
+
+             <div class="footer-itens">
+                <h2>Horário de Funcionamento</h2>
+                <div class="border"></div>
+                <ul>
+                    <li>De 2ª a 6ª feira: 08:00 às 20:00</li>
+                    <li>Sábados, domingos e feriados: Encerrado</li>
+                    
+                </ul>
+        </div>
+        
+              </div> 
+            </div> 
+        </footer>
+
+</body>
+</html>

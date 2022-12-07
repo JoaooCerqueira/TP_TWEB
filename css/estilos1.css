@@ -1,0 +1,325 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #B3CFDF;
+}
+
+/*menu*/
+
+
+
+/*formulario*/
+form{
+    width: 450px;
+    margin: 10px auto;    
+    background-color: #094161;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    margin-top: 20px;
+    border-radius: 40px;
+}
+
+#form{
+    color:white;
+}
+
+h1{
+    color:black;
+    text-align: center;
+    margin-top: 5px;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+input, textarea, button{
+    width: 100%;
+    margin-bottom:20px;
+    padding: 7px;
+    margin-top: 5px;
+    box-sizing: border-box;
+    font-size: 17px;
+    border:none;
+    border-radius: 3px;
+}
+
+select{
+    width: 30%;
+    margin-bottom:20px;
+    padding: 7px;
+    border:none;
+    border-radius: 3px;
+    box-sizing: border-box;
+    
+}
+
+textarea{
+    min-height: 100px;
+    max-height: 200px;
+    max-width: 100%;
+}
+
+#butao{
+    background-color:#46A8E1;
+    color:white;
+    padding: 20px;
+}
+
+#butao:hover{
+    cursor:pointer; 
+    background-color:#62c6ff;    
+}
+
+#butao_1{
+    background-color:#46A8E1;
+    color:white;
+    padding: 15px;
+}
+
+#butao_1:hover{
+    cursor:pointer; 
+    background-color:#62c6ff; 
+}
+
+
+
+@media screen and (max-width:480px){
+    form{
+        width: 100%;
+    }
+}
+
+label{
+    font-size: 1.1em;
+}
+
+#conteudo-principal{
+    font-size: 1.3em;
+    margin-left: 10px;
+}
+
+
+/* footer */
+
+.footer {
+    width: 100%;
+    background:#094161;
+    display: block;
+}
+
+.interior-footer {
+    width: 95%;
+    margin: auto;
+    padding: 30px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    justify-content: center;
+}
+
+.footer-itens {
+    width: 25%;
+    padding: 10px 20px;
+    box-sizing: border-box;
+}
+
+.footer-itens h1{
+    padding: 10px 0;
+    font-size: 25px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.footer-itens p{
+    color:rgb(172, 172, 172);
+    font-size: 16px;
+    text-align: justify;
+    line-height: 25px;
+}
+
+.footer-itens h2{
+    margin: 10px 0;
+    color:rgb(168, 168, 168);
+    font-size: 16px;
+    font-weight: lighter;
+    text-transform: uppercase;
+}
+
+.border{
+    height: 2px;
+    width: 40px;
+    background: #ff9800;
+}
+
+.footer-itens ul {
+    list-style: none;
+    color:#fff;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+}
+
+.footer-itens ul a{
+    text-decoration: none;
+    outline: none;
+    color:#fff;
+}
+
+.footer-itens ul a:hover{
+    color:#ff9800;
+    cursor:pointer; 
+}
+
+.footer-itens ul li{
+    margin: 10px 0;
+    height: 25px;
+}
+
+@media screen and (max-width: 1085px){
+   .footer-itens{
+       width: 50%;
+   } 
+}
+
+@media screen and (max-width: 600px){
+    .footer-itens{
+        width: 100%;
+    } 
+ }
+ 
+
+
+
+ 
+/*iframe*/
+
+ iframe{
+    margin: 10px 10px 20px 0px; 
+    padding: 10px;
+    width: 300px;
+    height: 300px;
+ }
+
+ 
+.mySlides {
+    display: none;
+}
+
+img {
+    vertical-align: middle;
+}
+
+img.ima{
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.centrar{
+	margin-top: 20px;	
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #46A8E1;
+}
+
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+
+  @-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+
+
+
+
+
+
+/*grafico indicadores*/
+
+.parent {
+    margin: 0 auto;
+    width: 50%; 
+}
+
+
+
+/*imagens*/
+.imag{
+    text-align:center;
+     width: 100%;
+    height: auto;
+    
+}
+
+.imag_1{
+    position: absolute;
+    left: 500px;
+    top: 187px;
+}
+
+@media screen and (max-width: 1070px){
+    .imag_1{
+        display:none;
+    }
+}
+
+
+
+/*recursos*/
+a{
+    text-decoration:none;
+    color:black;
+}
+
+a:hover{
+    color:rgb(68, 67, 67);
+    cursor:pointer; 
+}
+
+
+
+
+/*informações*/
+.border_1{
+    height: 2px;
+    width: 100%;
+    background: black;
+}
+
+
+

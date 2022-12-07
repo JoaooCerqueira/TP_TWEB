@@ -1,0 +1,130 @@
+$cor-fundo: #46A8E1;
+$cor-letra:#fff;
+$cor-hover:#555;
+$text-font: Arial;
+
+
+.menu{
+    width: 100%;
+    height: 50px;
+    background-color: $cor-fundo;
+    font-family: $text-font;
+}
+
+.menu{
+    ul{
+        list-style: none;
+        position: relative; 
+        visibility: visible; 
+        z-index: 100;
+
+            ul{
+                li{
+                    float: none;
+                    border-bottom: solid 1px #ccc;
+                    }
+                li{
+                    background-color: #069;
+                }
+              }
+            li{
+            width: 150px;
+            float:left;
+            &:hover{
+                ul{
+                    visibility: visible;
+                }
+            }
+
+           
+        }
+
+        ul{
+            position: absolute;
+            visibility: hidden; 
+        }
+    }
+
+    li{
+        &:last-child{
+            float: right; /*serve para colocar o login à direita*/
+        }
+    }
+
+    a{
+        padding:15px;
+        display: block;
+        text-decoration: none;
+        text-align: center;
+        background-color: $cor-fundo;
+        color:$cor-letra;
+
+        &:hover{
+            background-color: #f4f4f4;
+            color: $cor-hover;
+        }
+    }
+}
+
+label[for="botao_menu"]{
+    padding: 5px;
+    background-color:$cor-fundo;
+    color: $cor-letra;
+    font-family: $text-font;
+    text-align: center;
+    font-size: 30px;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+}
+
+#botao_menu{
+    display: none;
+}
+
+label[for="botao_menu"]{
+    display:none;
+}
+
+
+@media (max-width: 1067px){
+    label[for="botao_menu"]{
+        display:block;
+    }
+
+    #botao_menu{
+        &:checked{
+          &~{
+              .menu{
+                margin-left:0;
+                   }
+            }  
+                 }
+               }
+
+    .menu{
+        margin-top: 5px;
+        margin-left: -100%;
+        
+        ul{
+            li{
+                width: 100%;
+                float:none;
+
+                &:hover{
+                    ul{
+                        height: auto;
+                        max-height: 250px;  
+                    }
+                }
+            }
+
+            ul{
+                position: static;
+        overflow: hidden;
+        max-height: 0;
+            }
+        }
+    }    
+
+}
